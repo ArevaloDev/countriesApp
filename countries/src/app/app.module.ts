@@ -4,10 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HomepageComponent } from './home/homepage/homepage.component';
+import { AllcountriesComponent } from './countries/allcountries/allcountries.component';
+import { CountrydetailsComponent } from './countries/countrydetails/countrydetails.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomepageComponent,
+    AllcountriesComponent,
+    CountrydetailsComponent
   ],
   imports: [
     BrowserModule,
