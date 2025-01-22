@@ -7,13 +7,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HomepageComponent } from './home/homepage/homepage.component';
 import { AllcountriesComponent } from './countries/allcountries/allcountries.component';
 import { CountrydetailsComponent } from './countries/countrydetails/countrydetails.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     AllcountriesComponent,
-    CountrydetailsComponent
+    CountrydetailsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
