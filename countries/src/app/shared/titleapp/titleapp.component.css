@@ -1,0 +1,31 @@
+.header {
+  display: flex; /* Asegura que Flexbox esté activo */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content:center; /* Coloca elementos a los extremos */
+  padding: 3px 15px; /* Añade espacio interno */
+  background-color: black; /* Fondo claro */
+  border-bottom: 1px solid #e0e0e0; /* Línea sutil debajo */
+  color: #fff;
+}
+
+span{
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+mat-icon {
+  color: #333;
+}
+
+.content-input{
+  width: 30%;
+
+}
+
+.example-full-width {
+  width: 100%;
+  margin: 0 16px; /* Espacio alrededor de la barra de búsqueda */
+  margin-top: 20px;
+  border-radius: 5px;
+}

@@ -8,6 +8,10 @@ import { HomepageComponent } from './home/homepage/homepage.component';
 import { AllcountriesComponent } from './countries/allcountries/allcountries.component';
 import { CountrydetailsComponent } from './countries/countrydetails/countrydetails.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { MaterialModule } from './material.module';
+import { TitleappComponent } from './shared/titleapp/titleapp.component';
+import { SearchComponent } from './countries/search/search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,11 +19,16 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     HomepageComponent,
     AllcountriesComponent,
     CountrydetailsComponent,
-    SidebarComponent
+    SidebarComponent,
+    TitleappComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MaterialModule
+
   ],
   providers: [
     provideAnimationsAsync()
