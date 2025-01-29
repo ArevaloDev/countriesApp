@@ -12,10 +12,10 @@
 
   <mat-card *ngFor="let country of paginatedCountries"   class="example-card"  appearance="outlined">
     <mat-card-header>
-      <mat-card-title>{{country.name.common}}</mat-card-title>
+      <mat-card-title>{{country.name}}</mat-card-title>
       <mat-card-subtitle>{{country.continents}}</mat-card-subtitle>
     </mat-card-header>
-      <img mat-card-image class="img-country" [src]="country.flags.png" [alt]="country.name.common">
+      <img mat-card-image class="img-country" [src]="country.flags.png" [alt]="country.name">
 
     <mat-card-actions>
       <div class="example-button-row">

@@ -1,4 +1,4 @@
-export interface Country {
+export interface Countries {
   name:         Name;
   tld?:         string[];
   cca2:         string;
@@ -34,6 +34,16 @@ export interface Country {
   borders?:     string[];
   gini?:        { [key: string]: number };
   postalCode?:  PostalCode;
+}
+
+
+export interface Country{
+  name: string,
+  continents: string[],
+  capital?: string[],
+  population: number,
+  altSpellings: string[],
+  flags: Flags
 }
 
 export interface CapitalInfo {

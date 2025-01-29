@@ -1,7 +1,7 @@
 import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Country } from '../interfaces/countries.interface';
-import { catchError, map, of } from 'rxjs';
+import { Countries} from '../interfaces/countries.interface';
+import { catchError, map, of} from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -9,7 +9,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class CountryService {
 
-  public countries:Country[] = [];
   private url:string = 'https://restcountries.com/v3.1';
   constructor(
     private http:HttpClient,
@@ -18,22 +17,39 @@ export class CountryService {
 
 
   getAllCountries = () => {
-    return this.http.get<Country[]>(`${this.url}/all`).pipe(
+    return this.http.get<Countries[]>(`${this.url}/all`).pipe(
+      map((countries) => countries.slice(0, 100).map((country) => ({
+        name: country.name?.common,
+        continents: country.continents,
+        capital: country.capital,
+        population: country.population,
+        altSpellings: country.altSpellings,
+        flags: country.flags
+      }))),
+
       catchError(() => {
         this.showErrorNotification('Error al obtener los paises');
         return of([]);
       }),
-      map((countries) => countries.slice(0, 100)),
     )
   }
 
   getCountryByName = (name:string) => {
-    return this.http.get<Country[]>(`${this.url}/name/${name}?fullText=true`).pipe(
+    return this.http.get<Countries[]>(`${this.url}/name/${name}?fullText=true`).pipe(
+        map((countries) => countries.map((country) => ({
+        name: country.name?.common,
+        continents: country.continents,
+        capital: country.capital,
+        population: country.population,
+        altSpellings: country.altSpellings,
+        flags: country.flags
+      }))),
+
       catchError(() => {
         this.showErrorNotification('Error al obtener los datos del país');
         return of([]);
-      })
-    )
+      }),
+  )
   }
 
   showErrorNotification(message: string) {

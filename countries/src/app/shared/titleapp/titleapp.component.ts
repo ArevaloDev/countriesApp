@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CountryService } from '../../services/country.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Country } from '../../interfaces/countries.interface';
+import { FormBuilder, FormGroup} from '@angular/forms';
+import {  Country} from '../../interfaces/countries.interface';
 
 @Component({
   selector: 'app-titleapp',

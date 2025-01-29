@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { Country } from '../../interfaces/countries.interface';
+import { Component, OnInit } from '@angular/core';
+import { Countries, Country } from '../../interfaces/countries.interface';
 import { CountryService } from '../../services/country.service';
 
 @Component({
@@ -20,18 +20,16 @@ export class HomepageComponent implements OnInit {
 
   getAllCountries = () => {
     this.isLoading = true;
-    this.countryServices.getAllCountries().subscribe(response => {
+    this.countryServices.getAllCountries().subscribe((response) => {
       this.countriesHome = response;
       this.isLoading = false;
     })
   }
 
   justCountry = (event:Country[]) => {
-    console.log('hijo', event);
     if(!event) {
       this.getAllCountries();
     }
-
     this.countriesHome = event;
   }
 

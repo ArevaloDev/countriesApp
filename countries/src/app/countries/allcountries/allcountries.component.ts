@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges,  SimpleChanges } from '@angular/core';
-import { Country } from '../../interfaces/countries.interface';
+import { Countries, Country } from '../../interfaces/countries.interface';
 import { PageEvent } from '@angular/material/paginator';
 import { Router } from '@angular/router';
 
@@ -19,7 +19,6 @@ export class AllcountriesComponent implements  OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.countries);
     this.updatePaginatedCountries();
   }
 
