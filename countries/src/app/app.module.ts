@@ -9,8 +9,9 @@ import { AllcountriesComponent } from './countries/allcountries/allcountries.com
 import { CountrydetailsComponent } from './countries/countrydetails/countrydetails.component';
 import { MaterialModule } from './material.module';
 import { TitleappComponent } from './shared/titleapp/titleapp.component';
-import { SearchComponent } from './countries/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IsloadingComponent } from './shared/isloading/isloading.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,15 @@ import { HttpClientModule } from '@angular/common/http';
     AllcountriesComponent,
     CountrydetailsComponent,
     TitleappComponent,
-    SearchComponent
+    IsloadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [

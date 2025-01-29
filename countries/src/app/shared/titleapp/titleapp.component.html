@@ -1,38 +1,18 @@
 
 <div fxLayout="row"  class="header">
  <div fxLayout="row" >
-  <span>Countries App</span>
+  <span [routerLink]="'/home'">Countries App</span>
  </div>
 
  <div class="content-input">
-   <mat-form-field class="example-full-width">
-    <mat-label>Search country</mat-label>
-    <input matInput placeholder="Example: Spain" type="text">
-
-    <!---
-    <button mat-icon-button matSuffix>
-      <mat-icon>search</mat-icon>
-    </button>
-    -->
-  </mat-form-field>
+  <form [formGroup]="form" (ngSubmit)="getCountryByName()">
+    <mat-form-field class="example-full-width">
+     <mat-label>Search country</mat-label>
+     <input name="countryName" formControlName="countryName"  matInput placeholder="Example: Spain" type="text">
+   </mat-form-field>
+  </form>
  </div>
 </div>
+<app-isloading [isLoading]="isLoading"></app-isloading>
 
-
-
-
-<!-----
-\
-<mat-toolbar>
-    <app-sidebar></app-sidebar>
-  <span>Countries App</span>
-  <span class="example-spacer"></span>
-  <div>
-    <mat-form-field class="example-full-width">
-      <mat-label>Search country</mat-label>
-      <input matInput placeholder="Spain">
-    </mat-form-field>
-  </div>
-</mat-toolbar>
--->
 

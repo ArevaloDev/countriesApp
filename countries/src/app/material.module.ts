@@ -6,6 +6,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   imports:[
@@ -15,7 +18,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatSnackBarModule
   ],
   exports:[
     MatToolbarModule,
@@ -24,7 +29,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatSnackBarModule
   ]
 })
 

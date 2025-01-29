@@ -1,3 +1,4 @@
-<app-titleapp></app-titleapp>
+<app-titleapp (sendCountry)="justCountry($event)"></app-titleapp>
 
-<app-allcountries></app-allcountries>
+<app-isloading [isLoading]="isLoading"></app-isloading>
+<app-allcountries [countries]="countriesHome"></app-allcountries>
