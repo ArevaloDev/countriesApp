@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges,  SimpleChanges } from '@angular/core';
 import { Country } from '../../interfaces/countries.interface';
 import { PageEvent } from '@angular/material/paginator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-allcountries',
@@ -13,7 +14,7 @@ export class AllcountriesComponent implements  OnChanges {
   public paginatedCountries: Country[] = [];
   public pageSize:number = 10;
   public currentPage:number = 0;
-  constructor(){
+  constructor(private router:Router){
 
   }
 
@@ -34,5 +35,7 @@ export class AllcountriesComponent implements  OnChanges {
     const endIndex = startIndex + this.pageSize;
     this.paginatedCountries = this.countries.slice(startIndex, endIndex)
   }
+
+
 
 }
