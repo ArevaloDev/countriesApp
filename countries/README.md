@@ -1,3 +1,14 @@
+# Countries App
+
+Se muestran 100 paises al inicio de la pagina, pero puedes buscar cualquier pais
+
+## URL del Proyecto
+
+Puedes acceder a la versión en línea del proyecto aquí: https://thriving-entremet-56782d.netlify.app/
+
+
+
+
 # Countries
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
